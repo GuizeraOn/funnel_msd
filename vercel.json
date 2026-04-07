@@ -8,6 +8,14 @@
     {
       "source": "/vsl",
       "destination": "/vsl.html"
+    },
+    {
+      "source": "/upsell1",
+      "destination": "/upsell1.html"
+    },
+    {
+      "source": "/downsell1",
+      "destination": "/downsell1.html"
     }
   ]
 }

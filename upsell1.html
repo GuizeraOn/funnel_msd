@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paso 2 – Completa Tu Orden | Mujer Sabia y Diligente</title>
+    <meta name="description" content="Completa tu orden y accede al bono exclusivo Rompedor de Cadenas Invisibles.">
+    <!-- NO index para evitar que o Google indexe página de upsell -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- ============================================================ -->
+    <!-- META PIXEL                                                     -->
+    <!-- ============================================================ -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '914803984638439');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=914803984638439&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- END META PIXEL -->
+
+    <!-- ============================================================ -->
+    <!-- MICROSOFT CLARITY                                             -->
+    <!-- ============================================================ -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "w7zydtflpq");
+    </script>
+    <!-- END CLARITY -->
+
+    <!-- ============================================================ -->
+    <!-- FONTS & PRECONNECT                                            -->
+    <!-- ============================================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Hotmart checkout elements — defer para não bloquear renderização above the fold -->
+    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js" defer></script>
+
+    <!-- ============================================================ -->
+    <!-- STYLES                                                        -->
+    <!-- ============================================================ -->
+    <style>
+        /* ──────────────────────────────────────────────────────────
+           RESET & TOKENS
+        ────────────────────────────────────────────────────────── */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary:       #FDFBF7;   /* Ivory/Cream — MSD brand */
+            --text-primary:     #1A1A1A;
+            --text-secondary:   #4A4A4A;
+            --red-alert:        #D32F2F;
+            --red-alert-bg:     #FFEBEE;
+            --red-alert-light:  #FFEBEE;
+            --green-success:    #27AE60;
+            --gold:             #D4AF37;
+            --purple-brand:     #6A1B9A;
+            --font-main:        'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            --radius-card:      12px;
+            --shadow-card:      0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            /* Overflow-x oculto para evitar scroll horizontal em mobile */
+            overflow-x: hidden;
+        }
+
+        /* ──────────────────────────────────────────────────────────
+           3.1 — TOP ALERT BAR (Efeito Zeigarnik)
+        ────────────────────────────────────────────────────────── */
+        .top-alert-bar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            background-color: var(--red-alert-bg);
+            border-bottom: 1px solid #FFCDD2;
+            padding: 10px 16px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--red-alert);
+            letter-spacing: 0.02em;
+            /* Animação sutil de atenção */
+            animation: alert-pulse-bg 3s ease-in-out infinite;
+        }
+
+        @keyframes alert-pulse-bg {
+            0%,100% { background-color: #FFEBEE; }
+            50%      { background-color: #FFCDD2; }
+        }
+
+        .top-alert-bar .progress-dots {
+            display: inline-flex;
+            gap: 6px;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+
+        .top-alert-bar .progress-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .top-alert-bar .dot-done  { background-color: var(--red-alert); }
+        .top-alert-bar .dot-active{ background-color: var(--red-alert); opacity: 0.5;
+                                    animation: dot-blink 1s ease-in-out infinite; }
+        .top-alert-bar .dot-empty { background-color: #FFCDD2; }
+
+        @keyframes dot-blink {
+            0%,100% { opacity: 0.3; }
+            50%      { opacity: 1; }
+        }
+
+        /* ──────────────────────────────────────────────────────────
+           LAYOUT PRINCIPAL — Mobile-first, zero leaks
+        ────────────────────────────────────────────────────────── */
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 0 16px 48px;
+        }
+
+        /* ──────────────────────────────────────────────────────────
+           3.2 — HEADLINE DE RETENÇÃO
+        ────────────────────────────────────────────────────────── */
+        .retention-block {
+            width: 100%;
+            max-width: 480px;
+            margin-top: 24px;
+            text-align: center;
+        }
+
+        .system-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #FFF3E0;
+            border: 1px solid #FFE0B2;
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #E65100;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+        }
+
+        .system-badge .dot-live {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #E65100;
+            animation: dot-blink 1s ease-in-out infinite;
+        }
+
+        h1.retention-h1 {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--red-alert);
+            line-height: 1.15;
+            text-transform: uppercase;
+            letter-spacing: -0.01em;
+            margin-bottom: 12px;
+        }
+
+        /* Em telas maiores, aumenta levemente */
+        @media (min-width: 420px) {
+            h1.retention-h1 { font-size: 26px; }
+        }
+
+        h2.retention-h2 {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        h2.retention-h2 strong {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        /* Divisor decorativo */
+        .divider {
+            width: 48px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--purple-brand), var(--gold));
+            border-radius: 2px;
+            margin: 16px auto;
+        }
+
+        /* ──────────────────────────────────────────────────────────
+           3.3 — VSL CONTAINER (Aspect-ratio 2:3, Mobile-First)
+        ────────────────────────────────────────────────────────── */
+        .vsl-container {
+            width: 100%;
+            max-width: 450px;
+            margin-top: 20px;
+            /* LCP: Garante tamanho sutil sem forçar proporção ou fundo */
+            background: transparent;
+            border-radius: var(--radius-card);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            border: 2px solid rgba(212, 175, 55, 0.15); /* Mais sutil */
+        }
+
+        .vsl-container iframe,
+        .vsl-container video,
+        .vsl-container vturb-smartplayer {
+            display: block;
+            width: 100%;
+            border: none;
+        }
+
+
+
+        /* Micro-instrução abaixo do vídeo */
+        .vsl-instruction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-top: 12px;
+            padding: 8px 16px;
+            background: #F5F5F0;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        /* ──────────────────────────────────────────────────────────
+           3.4 — DELAY CONTAINER (Hotmart Widget)
+           Oculto por padrão; revelado via JS setTimeout
+        ────────────────────────────────────────────────────────── */
+        #upsell-delay-container {
+            display: none;
+            opacity: 0;
+            width: 100%;
+            max-width: 500px;
+            margin: 28px auto 0;
+            transition: opacity 0.8s ease;
+            text-align: center;
+        }
+
+        /* Classe adicionada pelo JS para o fade-in */
+        #upsell-delay-container.fade-in-animation {
+            opacity: 1;
+        }
+
+        /* Separator antes do widget */
+        .offer-separator {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .offer-separator::before,
+        .offer-separator::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #E0DCDC, transparent);
+        }
+
+        .offer-separator span {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--red-alert);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            white-space: nowrap;
+        }
+
+        /* Texto de urgência acima do botão da Hotmart */
+        .urgency-text {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--red-alert);
+            text-align: center;
+            padding: 12px 16px;
+            background-color: #FFF5F5;
+            border: 1px solid #FFCDD2;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .urgency-text::before {
+            content: '⚡ ';
+        }
+
+        /* Container Hotmart — ocupa full width disponível */
+        #hotmart-sales-funnel {
+            width: 100%;
+        }
+
+        /* Recusa link abaixo do widget (será injetado pelo Hotmart,
+           mas estilizamos o fallback caso o snippet use um <a>#) */
+        .decline-link {
+            display: block;
+            margin-top: 16px;
+            font-size: 12px;
+            color: #AAAAAA;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        .decline-link:hover {
+            color: #777;
+        }
+
+        /* ──────────────────────────────────────────────────────────
+           ANIMAÇÕES UTILITÁRIAS
+        ────────────────────────────────────────────────────────── */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* ──────────────────────────────────────────────────────────
+           MOBILE — iPhone SE (320px) e até 430px
+        ────────────────────────────────────────────────────────── */
+        @media (max-width: 360px) {
+            h1.retention-h1  { font-size: 21px; }
+            h2.retention-h2  { font-size: 14px; }
+            .top-alert-bar   { font-size: 11px; }
+        }
+
+        /* Em desktop, centraliza e limita a largura máxima */
+        @media (min-width: 600px) {
+            .vsl-container { max-width: 400px; }
+            #upsell-delay-container { max-width: 480px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         3.1 — TOP ALERT BAR
+         Efeito Zeigarnik: "checkout não terminou"
+    ============================================================ -->
+    <div class="top-alert-bar" role="alert" aria-live="polite">
+        ⚠️&nbsp; TU ORDEN ESTÁ CASI COMPLETA (Paso 1 de 2)
+        <span class="progress-dots" aria-hidden="true">
+            <span class="dot-done"></span>
+            <span class="dot-active"></span>
+            <span class="dot-empty"></span>
+        </span>
+    </div>
+
+    <!-- ============================================================
+         PÁGINA PRINCIPAL — flex column, align-items center
+    ============================================================ -->
+    <main class="page-wrapper">
+
+        <!-- --------------------------------------------------------
+             3.2 — HEADLINE DE RETENÇÃO (above the fold)
+        -------------------------------------------------------- -->
+        <section class="retention-block animate-in" aria-label="Aviso importante do sistema">
+
+            <div class="system-badge">
+                <span class="dot-live" aria-hidden="true"></span>
+                Aviso del sistema
+            </div>
+
+            <h1 class="retention-h1">
+                ¡ESPERA! NO CIERRES<br>ESTA PÁGINA AÚN.
+            </h1>
+
+            <div class="divider" aria-hidden="true"></div>
+
+            <h2 class="retention-h2">
+                Estamos preparando tu acceso.<br>
+                <strong>Mira este video importante</strong> antes de continuar
+                para evitar errores en tu orden.
+            </h2>
+
+        </section>
+
+        <!-- --------------------------------------------------------
+             3.3 — VSL CONTAINER (aspect-ratio 2:3)
+        -------------------------------------------------------- -->
+        <div class="vsl-container" id="vsl-container" aria-label="Vídeo importante para completar sua ordem">
+            <vturb-smartplayer id="vid-69d561be26232d95b9605405" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"></vturb-smartplayer>
+            <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/4c1a9c3b-00e2-43d6-a15e-6292f9f02dbb/players/69d561be26232d95b9605405/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+        </div>
+
+
+        <!-- Micro-instrução de UX abaixo do player -->
+
+
+        <!-- --------------------------------------------------------
+             3.4 — DELAY CONTAINER (Hotmart Widget)
+             Oculto por padrão. Revelado via setTimeout (JS abaixo).
+             NÃO mova nem renomeie o id="upsell-delay-container"
+             pois o JS referencia diretamente.
+        -------------------------------------------------------- -->
+        <div id="upsell-delay-container"
+             role="region"
+             aria-label="Oferta especial — completa tu orden ahora"
+             aria-hidden="true">
+
+
+
+            <!-- ════════════════════════════════════════════════
+                 SNIPPET HOTMART — inserir o código fornecido pelo
+                 painel Hotmart > Funil de Vendas aqui dentro.
+                 O JS vai chamar checkoutElements.init() somente
+                 quando este container estiver display:block.
+            ════════════════════════════════════════════════ -->
+            <div id="hotmart-sales-funnel"></div>
+
+            <!--
+            EXEMPLO de snippet que a Hotmart fornece (substituir):
+            <script>
+              checkoutElements
+                .init("salesFunnel", { offerCode: "[SEU-OFFER-CODE]" })
+                .mount("#hotmart-sales-funnel");
+            </script>
+            -->
+
+        </div><!-- /#upsell-delay-container -->
+
+    </main><!-- /.page-wrapper -->
+
+
+    <!-- ============================================================
+         SCRIPTS
+    ============================================================ -->
+
+    <!--
+    ──────────────────────────────────────────────────────────────────
+    4.1 — TEMPORIZADOR PITCH (Vanilla JS)
+    Ajuste a variável TEMPO_PITCH_MS abaixo para o milissegundo
+    exato em que a Expert diz "Haz clic en el botón verde…"
+    Exemplo: 4m 20s = (4*60 + 20) * 1000 = 260000
+    ──────────────────────────────────────────────────────────────────
+    -->
+    <script>
+        // ▼▼▼ AJUSTAR AQUI: tempo exato do Call To Action no vídeo (em ms) ▼▼▼
+        var TEMPO_PITCH_MS = 224000; // 3m 44s — ajustar após definir o vídeo final
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var delayContainer = document.getElementById("upsell-delay-container");
+
+
+            // ─── Ocultar container por JS (dupla garantia além do CSS) ───
+            delayContainer.style.display = "none";
+            delayContainer.setAttribute("aria-hidden", "true");
+
+            // ─── Dispara o timer ao carregar a página ───────────────────
+            // Para sincronizar com o play do usuário em vez do load da página,
+            // basta mover o setTimeout para dentro do evento de clique abaixo.
+            iniciarDelayPitch();
+
+
+        });
+
+        function iniciarDelayPitch() {
+            setTimeout(function () {
+
+                var delayContainer = document.getElementById("upsell-delay-container");
+
+                // 1. Revela o container
+                delayContainer.style.display = "block";
+                delayContainer.setAttribute("aria-hidden", "false");
+
+                // Força reflow para a transição de opacidade funcionar
+                void delayContainer.offsetWidth;
+
+                // 2. Fade-in suave
+                delayContainer.classList.add("fade-in-animation");
+
+                // 3. Scroll suave até o widget
+                setTimeout(function () {
+                    delayContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 300);
+
+                // 4. Inicializa o widget Hotmart SOMENTE agora
+                //    (evita height:0 em containers com display:none)
+                //
+                //    ▼▼▼ DESCOMENTE e ajuste quando tiver o snippet da Hotmart ▼▼▼
+                //
+                // if (typeof checkoutElements !== 'undefined') {
+                //     checkoutElements
+                //         .init("salesFunnel", { offerCode: "[SEU-OFFER-CODE]" })
+                //         .mount("#hotmart-sales-funnel");
+                // }
+
+            }, TEMPO_PITCH_MS);
+        }
+    </script>
+
+    <!--
+    ──────────────────────────────────────────────────────────────────
+    UTM PASSTHROUGH — garante repasse de parâmetros UTM para Hotmart
+    ──────────────────────────────────────────────────────────────────
+    -->
+    <script>
+        var prefix = ["https://payment.hotmart.com", "https://pay.hotmart.com"];
+
+        function getParams() {
+            var t = "", e = window.top.location.href, r = new URL(e);
+            if (r !== null) {
+                var a = r.searchParams.get("utm_source"),
+                    n = r.searchParams.get("utm_medium"),
+                    o = r.searchParams.get("utm_campaign"),
+                    m = r.searchParams.get("utm_term"),
+                    c = r.searchParams.get("utm_content");
+                if (e.indexOf("?") !== -1) {
+                    t = "&sck=" + a + "|" + n + "|" + o + "|" + m + "|" + c;
+                }
+            }
+            return t;
+        }
+
+        !function () {
+            var t = new URLSearchParams(window.location.search);
+            if (t.toString()) {
+                document.querySelectorAll("a").forEach(function (e) {
+                    for (var r = 0; r < prefix.length; r++) {
+                        if (e.href.indexOf(prefix[r]) !== -1) {
+                            e.href += (e.href.indexOf("?") === -1 ? "?" : "&") + t.toString() + getParams();
+                        }
+                    }
+                });
+            }
+        }();
+    </script>
+
+</body>
+</html>
