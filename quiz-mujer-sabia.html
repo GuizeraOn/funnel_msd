@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué Mujer de la Biblia eres? – Mujer Sabia y Diligente</title>
+    <meta name="description" content="Descubre qué mujer bíblica representa tu momento actual y cómo puedes activar tu sabiduría y diligencia para transformar tu vida.">
+    
+    <!-- SEO & Social Media Meta Tags -->
+    <meta property="og:title" content="¿Qué Mujer de la Biblia eres? – Mujer Sabia y Diligente">
+    <meta property="og:description" content="Descubre qué mujer bíblica representa tu momento actual y cómo puedes transformar tu vida.">
+    <meta property="og:image" content="images/favicon.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+<!-- VTurbo Optimization (Preloading VSL) -->
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/4c1a9c3b-00e2-43d6-a15e-6292f9f02dbb/players/69d411c874f77e9c13a8fa76/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/4c1a9c3b-00e2-43d6-a15e-6292f9f02dbb/69d4114036249def114d98ca/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+<!-- CLOAKER CASEIRO -->
+<script>
+  // 1. Defina a URL da sua página ISCA
+  var decoyUrl = "https://mujer-sabiyadiligente.vercel.app";
+
+  // 2. Detecta se é Desktop (PC/Mac)
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  
+  if (!isMobile) {
+      // Se for Desktop, manda direto para a isca. Fim de jogo para o espião no PC.
+      window.location.replace(decoyUrl);
+  } else {
+      // 3. Se for Mobile, checa a localização (Bloqueia curiosos do Brasil)
+      // Usando geojs.io que é mais estável e não tem os mesmos bloqueios de CORS/Rate Limit que a ipapi.co
+      fetch('https://get.geojs.io/v1/ip/country.json')
+        .then(function(response) { return response.json(); })
+        .then(function(data) {
+            // geojs retorna a sigla no campo 'country' em vez de 'country_code'
+            if(data.country === 'BR') {
+                // Se for celular, mas estiver no Brasil, manda pra isca.
+                window.location.replace(decoyUrl);
+            }
+        })
+        .catch(function(error) {
+            console.log("Erro ao checar IP", error);
+        });
+  }
+</script>
+<!-- FIM CLOAKER CASEIRO -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1a0a2e;
+    --text: #F5F0E8;
+    --gold: #C9A84C;
+    --gold-bright: #FFD700;
+    --red: #E53935;
+    --red-dark: #C62828;
+    --card-bg: rgba(255,255,255,0.06);
+    --card-border: rgba(201,168,76,0.3);
+    --gold-bg: rgba(201,168,76,0.1);
+    --progress-track: rgba(201,168,76,0.2);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* Particle background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.04) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.06) 0%, transparent 40%),
+      radial-gradient(ellipse at 60% 80%, rgba(138,43,226,0.08) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #app {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px 40px;
+  }
+
+  /* ── PROGRESS BAR ── */
+  .progress-wrap {
+    width: 100%;
+    max-width: 580px;
+    padding: 20px 0 0;
+  }
+  .progress-logo {
+    display: block;
+    margin: 0 auto 14px;
+    height: 52px;
+    width: auto;
+    object-fit: contain;
+  }
+  .progress-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .progress-label {
+    font-size: 12px;
+    color: rgba(245,240,232,0.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .progress-track {
+    height: 4px;
+    background: var(--progress-track);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+    border-radius: 99px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px rgba(201,168,76,0.6);
+  }
+
+  /* ── STAGE CONTAINER ── */
+  .stage {
+    display: none;
+    width: 100%;
+    max-width: 580px;
+    animation: fadeIn 0.35s ease;
+  }
+  .stage.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+  }
+  .fading { animation: fadeOut 0.2s ease forwards; }
+
+  /* ── STAGE CONTENT ── */
+  .stage-inner {
+    padding: 28px 0 0;
+    text-align: center;
+  }
+
+  .stage-emoji {
+    font-size: 52px;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+
+  .stage-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .stage-subtitle {
+    font-size: 13px;
+    color: rgba(245,240,232,0.55);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+
+  .stage-lead {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.75;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  /* ── OPTIONS ── */
+  .options-grid {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .options-grid.two-col {
+    grid-template-columns: 1fr 1fr;
+  }
+  .options-grid.one-col {
+    grid-template-columns: 1fr;
+  }
+
+  .option-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .option-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(201,168,76,0.12), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .option-card:hover {
+    border-color: var(--gold);
+    box-shadow: inset 0 0 16px rgba(201,168,76,0.12), 0 4px 20px rgba(0,0,0,0.3);
+    transform: translateY(-1px);
+  }
+  .option-card:hover::before { opacity: 1; }
+  .option-card.selected {
+    background: rgba(201,168,76,0.18);
+    border-color: var(--gold);
+    box-shadow: 0 0 0 1px var(--gold), inset 0 0 20px rgba(201,168,76,0.15);
+  }
+
+  .option-emoji {
+    font-size: 28px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .option-text {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--text);
+  }
+
+  /* Two-col cards: center content */
+  .two-col .option-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 14px;
+    gap: 10px;
+  }
+  .two-col .option-emoji { font-size: 32px; }
+  .two-col .option-text { font-size: 14px; }
+
+  /* ── CHECKBOX OPTIONS ── */
+  .checkbox-option {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-align: left;
+    transition: all 0.2s ease;
+  }
+  .checkbox-option:hover {
+    border-color: rgba(201,168,76,0.6);
+  }
+  .checkbox-option.checked {
+    background: rgba(201,168,76,0.12);
+    border-color: var(--gold);
+  }
+
+  .checkbox-box {
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 2px solid rgba(201,168,76,0.5);
+    background: transparent;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .checkbox-option.checked .checkbox-box {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+  .checkbox-check {
+    color: #1a0a2e;
+    font-size: 13px;
+    font-weight: 900;
+    display: none;
+  }
+  .checkbox-option.checked .checkbox-check { display: block; }
+
+  /* ── CONTINUE BUTTON ── */
+  .btn-continue {
+    display: none;
+    margin: 20px auto 0;
+    background: var(--gold);
+    color: #1a0a2e;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 48px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+  }
+  .btn-continue:hover {
+    background: var(--gold-bright);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px rgba(201,168,76,0.5);
+  }
+  .btn-continue.visible { display: block; }
+
+  /* ── LOADING SCREEN ── */
+  #loading {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    width: 100%;
+    max-width: 440px;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  #loading.active { display: flex; }
+
+  .loading-icon {
+    font-size: 64px;
+    margin-bottom: 32px;
+    animation: spinGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes spinGlow {
+    0%   { transform: rotate(0deg) scale(1);   filter: drop-shadow(0 0 8px rgba(201,168,76,0.6)); }
+    50%  { transform: rotate(180deg) scale(1.1); filter: drop-shadow(0 0 20px rgba(255,215,0,0.9)); }
+    100% { transform: rotate(360deg) scale(1);  filter: drop-shadow(0 0 8px rgba(201,168,76,0.6)); }
+  }
+
+  .loading-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    color: var(--text);
+    min-height: 56px;
+    transition: opacity 0.3s;
+  }
+  .loading-text.fading { opacity: 0; }
+
+  .loading-bar-wrap {
+    width: 100%;
+    max-width: 320px;
+    height: 6px;
+    background: var(--progress-track);
+    border-radius: 99px;
+    margin: 24px auto 16px;
+    overflow: hidden;
+  }
+  .loading-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+    border-radius: 99px;
+    box-shadow: 0 0 10px rgba(201,168,76,0.7);
+    transition: width 4s cubic-bezier(0.1, 0.4, 0.8, 1);
+  }
+
+  .loading-hint {
+    font-size: 12px;
+    color: rgba(245,240,232,0.4);
+    letter-spacing: 0.3px;
+    margin-top: 4px;
+  }
+
+  /* ── RESULT SCREENS ── */
+  .result-screen {
+    display: none;
+    width: 100%;
+    max-width: 580px;
+    padding: 20px 0 40px;
+    animation: fadeIn 0.5s ease;
+  }
+  .result-screen.active { display: block; }
+
+  .result-badge {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  .result-badge span {
+    display: inline-block;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid rgba(201,168,76,0.5);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 99px;
+  }
+
+  .result-hero {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  
+  /* ESTILOS DAS IMAGENS DE PERFIL */
+  .profile-image-wrapper {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid rgba(201,168,76,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 15px rgba(201,168,76,0.1);
+    position: relative;
+    background: #000;
+  }
+  .profile-image-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 24px rgba(0,0,0,0.5);
+    border-radius: 12px;
+    pointer-events: none;
+  }
+  .profile-image-wrapper img {
+    width: 100%;
+    height: auto; /* Respeita o Aspect Ratio inteligente (AR) */
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .profile-image-wrapper:hover img {
+    transform: scale(1.02);
+  }
+
+  .result-emoji-big {
+    font-size: 64px;
+    display: block;
+    margin-bottom: 16px;
+    filter: drop-shadow(0 0 16px rgba(201,168,76,0.5));
+  }
+  .result-profile-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .result-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  .result-divider {
+    text-align: center;
+    color: var(--gold);
+    font-size: 18px;
+    letter-spacing: 8px;
+    margin: 20px 0;
+    opacity: 0.6;
+  }
+
+  .result-body {
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(245,240,232,0.9);
+  }
+  .result-body p { margin-bottom: 16px; }
+  .result-body strong { color: var(--text); font-weight: 700; }
+  .result-body em { color: var(--gold); font-style: italic; }
+
+  .result-highlight-box {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.35);
+    border-radius: 16px;
+    padding: 20px 22px;
+    margin: 24px 0;
+    font-size: 15px;
+    line-height: 1.65;
+    color: rgba(245,240,232,0.9);
+  }
+  .result-highlight-box strong { color: var(--gold-bright); }
+
+  /* ── CTA BUTTON ── */
+  .cta-button {
+    display: block;
+    background: linear-gradient(135deg, #E53935, #C62828);
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 18px 36px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    animation: pulse-red 1.8s infinite;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .cta-button:hover { transform: scale(1.02); }
+
+  @keyframes pulse-red {
+    0%   { box-shadow: 0 0 0 0 rgba(229,57,53,0.6), 0 4px 20px rgba(229,57,53,0.3); }
+    70%  { box-shadow: 0 0 0 16px rgba(229,57,53,0), 0 4px 20px rgba(229,57,53,0.2); }
+    100% { box-shadow: 0 0 0 0 rgba(229,57,53,0), 0 4px 20px rgba(229,57,53,0.3); }
+  }
+
+  .cta-wrap { text-align: center; }
+
+  .cta-disclaimer {
+    margin-top: 14px;
+    font-size: 12px;
+    color: rgba(245,240,232,0.35);
+    text-align: center;
+  }
+  .cta-disclaimer span { color: rgba(201,168,76,0.6); }
+
+  /* ── FLOATING PARTICLES ── */
+  .particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: 0;
+    animation: float-up var(--dur) ease-in infinite;
+    animation-delay: var(--delay);
+    left: var(--x);
+    top: 110%;
+    box-shadow: 0 0 4px rgba(201,168,76,0.8);
+  }
+
+  @keyframes float-up {
+    0%   { opacity: 0;   transform: translateY(0) scale(1); }
+    10%  { opacity: 0.6; }
+    90%  { opacity: 0.2; }
+    100% { opacity: 0;   transform: translateY(-110vh) scale(0.5); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 480px) {
+    .stage-title { font-size: 19px; }
+    .two-col .option-card { padding: 16px 10px; }
+    .result-subtitle { font-size: 19px; }
+    .cta-button { font-size: 14px; padding: 16px 24px; }
+  }
+  /* ── STICKY CTA BAR ── */
+  #sticky-cta-bar {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 12px 16px 20px;
+    background: linear-gradient(to top, rgba(26,10,46,0.98) 60%, transparent);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  #sticky-cta-bar.visible {
+    transform: translateY(0);
+  }
+  .sticky-cta-btn {
+    display: block;
+    background: linear-gradient(135deg, #E53935, #C62828);
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 15px 24px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    animation: pulse-red 1.8s infinite;
+    box-shadow: 0 -4px 24px rgba(229,57,53,0.3);
+  }
+
+  /* Show sticky only on mobile */
+  @media (min-width: 768px) {
+    #sticky-cta-bar { display: none !important; }
+  }
+  @media (max-width: 767px) {
+    #sticky-cta-bar { display: block; }
+    /* Add bottom padding to result so sticky bar doesn't cover content */
+    .result-screen.active { padding-bottom: 90px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Floating particles -->
+<div class="particles" id="particles"></div>
+
+<div id="app">
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-wrap" id="progressWrap">
+    <img src="images/favicon.png" alt="Mujer Sabia y Diligente" class="progress-logo">
+    <div class="progress-header">
+      <span class="progress-label">Tu Diagnóstico Bíblico</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill" style="width: 6.66%"></div>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 1 ══════════ -->
+  <div class="stage active" id="stage-1">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Sientes que Dios te ha dado talentos, pero aun así no logras actuar como te gustaría?</h2>
+      <div class="options-grid one-col">
+        <div class="option-card" onclick="nextStage(1)">
+          <span class="option-emoji">🎯</span>
+          <span class="option-text">Sí, y eso me frustra</span>
+        </div>
+        <div class="option-card" onclick="nextStage(1)">
+          <span class="option-emoji">🧩</span>
+          <span class="option-text">A veces, pero lo ignoro</span>
+        </div>
+        <div class="option-card" onclick="nextStage(1)">
+          <span class="option-emoji">💭</span>
+          <span class="option-text">No pienso mucho en eso</span>
+        </div>
+        <div class="option-card" onclick="nextStage(1)">
+          <span class="option-emoji">🪞</span>
+          <span class="option-text">Sí, y eso me da vergüenza</span>
+        </div>
+      </div>
+      <p class="cta-disclaimer" style="margin-top: 20px;">🚨 ¡Solo 1 intento por persona!</p>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 2 ══════════ -->
+  <div class="stage" id="stage-2">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Alguna vez te has pasado horas en el sofá, deslizando en redes sociales y, al final del día, con la sensación de que no hiciste nada útil?</h2>
+      <p class="stage-subtitle">Elige la respuesta que más te representa:</p>
+      <div class="options-grid one-col">
+        <div class="option-card" data-skip="false" onclick="handleStep2Select(this, 1)">
+          <span class="option-emoji">🛋️</span>
+          <span class="option-text">Sí, y eso me deja con remordimiento</span>
+        </div>
+        <div class="option-card" data-skip="false" onclick="handleStep2Select(this, 2)">
+          <span class="option-emoji">📵</span>
+          <span class="option-text">A veces, pero intento no pensar en eso</span>
+        </div>
+        <div class="option-card" data-skip="true" onclick="handleStep2Select(this, 3)">
+          <span class="option-emoji">✅</span>
+          <span class="option-text">Rara vez, logro controlarme bien</span>
+        </div>
+        <div class="option-card" data-skip="true" onclick="handleStep2Select(this, 4)">
+          <span class="option-emoji">🚫</span>
+          <span class="option-text">No, eso no me pasa</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 3 (INTERMEDIATE) ══════════ -->
+  <div class="stage" id="stage-3">
+    <div class="stage-inner">
+      <div class="profile-image-wrapper" style="max-width: 440px;">
+        <img src="images/step3_stressed_woman.png" alt="Comparaciones" loading="lazy">
+      </div>
+      <h2 class="stage-title">Comparaciones silenciosas que te paralizan</h2>
+      <p class="result-body" style="padding: 0 10px;">Ves a mujeres con una vida "perfecta" en redes sociales y, sin darte cuenta, empiezas a sentirte insuficiente. El problema no es solo el contenido que ves, sino mirarte con los ojos equivocados.</p>
+      <div class="result-highlight-box" style="margin: 15px 0;">
+        <em>“Cada una ha recibido un don especial de parte de Dios.”</em> — 1 Pedro 4:10
+      </div>
+      <button class="btn-continue visible" onclick="nextStage(3)">Continuar →</button>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 4 ══════════ -->
+  <div class="stage" id="stage-4">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Sientes que tu vida está yendo en la dirección que te gustaría?</h2>
+      <div class="options-grid one-col">
+        <div class="option-card" onclick="nextStage(4)">
+          <span class="option-emoji">🚩</span>
+          <span class="option-text">Está totalmente fuera de rumbo</span>
+        </div>
+        <div class="option-card" onclick="nextStage(4)">
+          <span class="option-emoji">⏳</span>
+          <span class="option-text">Está estancada, pero tengo ganas de cambiar</span>
+        </div>
+        <div class="option-card" onclick="nextStage(4)">
+          <span class="option-emoji">🔄</span>
+          <span class="option-text">Avanzo un poco, me detengo y vuelvo a empezar</span>
+        </div>
+        <div class="option-card" onclick="nextStage(4)">
+          <span class="option-emoji">🌊</span>
+          <span class="option-text">Está avanzando, pero con dificultad</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 5 ══════════ -->
+  <div class="stage" id="stage-5">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Cuál de estas frases te repites más a ti misma?</h2>
+      <div class="options-grid one-col">
+        <div class="option-card" onclick="nextStage(5)">
+          <span class="option-emoji">🗣️</span>
+          <span class="option-text">Sé lo que tengo que hacer, pero no lo hago</span>
+        </div>
+        <div class="option-card" onclick="nextStage(5)">
+          <span class="option-emoji">🕒</span>
+          <span class="option-text">Mi rutina me consume</span>
+        </div>
+        <div class="option-card" onclick="nextStage(5)">
+          <span class="option-emoji">🗓️</span>
+          <span class="option-text">Cuando las cosas mejoren, empiezo</span>
+        </div>
+        <div class="option-card" onclick="nextStage(5)">
+          <span class="option-emoji">🛑</span>
+          <span class="option-text">Quiero cambiar, pero siento que algo me detiene</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 6 ══════════ -->
+  <div class="stage" id="stage-6">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Alguna vez has sentido que las cosas salen bien para todos, menos para ti?</h2>
+      <div class="options-grid one-col">
+        <div class="option-card" onclick="nextStage(6)">
+          <span class="option-emoji">😔</span>
+          <span class="option-text">Sí, lo siento con frecuencia</span>
+        </div>
+        <div class="option-card" onclick="nextStage(6)">
+          <span class="option-emoji">📍</span>
+          <span class="option-text">Me siento exactamente así ahora</span>
+        </div>
+        <div class="option-card" onclick="nextStage(6)">
+          <span class="option-emoji">🕰️</span>
+          <span class="option-text">Rara vez, pero ya lo he sentido</span>
+        </div>
+        <div class="option-card" onclick="nextStage(6)">
+          <span class="option-emoji">🕊️</span>
+          <span class="option-text">No, me siento en paz con eso</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 7 ══════════ -->
+  <div class="stage" id="stage-7">
+    <div class="stage-inner">
+      <h2 class="stage-title">Cuando intentas empezar algo nuevo, ¿qué suele pasar?</h2>
+      <div class="options-grid one-col">
+        <div class="option-card" onclick="nextStage(7)">
+          <span class="option-emoji">📉</span>
+          <span class="option-text">Me entusiasmo, pero pronto me desanimo</span>
+        </div>
+        <div class="option-card" onclick="nextStage(7)">
+          <span class="option-emoji">📱</span>
+          <span class="option-text">Me distraigo con las cosas del día a día</span>
+        </div>
+        <div class="option-card" onclick="nextStage(7)">
+          <span class="option-emoji">👥</span>
+          <span class="option-text">Me comparo con otras mujeres y me detengo</span>
+        </div>
+        <div class="option-card" onclick="nextStage(7)">
+          <span class="option-emoji">⏳</span>
+          <span class="option-text">Siento miedo de equivocarme y lo dejo para después</span>
+        </div>
+        <div class="option-card" onclick="nextStage(7)">
+          <span class="option-emoji">🙏</span>
+          <span class="option-text">Oro, pero espero una “señal” para actuar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 8 (CHECKBOX) ══════════ -->
+  <div class="stage" id="stage-8">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Qué es lo que más te impide mantener una rutina productiva con propósito?</h2>
+      <p class="stage-subtitle">Puedes seleccionar más de una opción:</p>
+      <div class="options-grid one-col" id="checkboxGroup8">
+        <div class="checkbox-option" onclick="toggleMulti(this, 8)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">🎯</span>
+          <span class="option-text">Falta de claridad sobre qué es lo más importante</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleMulti(this, 8)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">📋</span>
+          <span class="option-text">Desorganización y exceso de tareas</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleMulti(this, 8)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">🔋</span>
+          <span class="option-text">Falta de energía o motivación</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleMulti(this, 8)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">🤝</span>
+          <span class="option-text">Siento que no tengo apoyo o que nadie entiende lo que estoy viviendo</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleMulti(this, 8)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">✝️</span>
+          <span class="option-text">Mi fe está debilitada y me siento confundida</span>
+        </div>
+      </div>
+      <button class="btn-continue" id="btnContinue8" onclick="nextStage(8)">Continuar →</button>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 9 ══════════ -->
+  <div class="stage" id="stage-9">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Alguna vez te has sentido en conflicto entre ser <strong>espiritual</strong> y ser <strong>productiva</strong>?</h2>
+      <div class="options-grid one-col">
+        <div class="option-card" onclick="nextStage(9)">
+          <span class="option-emoji">🌍</span>
+          <span class="option-text">Sí, siento que la productividad es algo del mundo</span>
+        </div>
+        <div class="option-card" onclick="nextStage(9)">
+          <span class="option-emoji">⏳</span>
+          <span class="option-text">Sí, porque no quiero actuar en la carne, sino en el tiempo de Dios</span>
+        </div>
+        <div class="option-card" onclick="nextStage(9)">
+          <span class="option-emoji">💎</span>
+          <span class="option-text">No, creo que puedo unir ambas cosas</span>
+        </div>
+        <div class="option-card" onclick="nextStage(9)">
+          <span class="option-emoji">💡</span>
+          <span class="option-text">Nunca lo había pensado, pero ahora tiene sentido</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 10 ══════════ -->
+  <div class="stage" id="stage-10">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Cómo reaccionas cuando te das cuenta de que estás postergando todo?</h2>
+      <div class="options-grid one-col">
+        <div class="option-card" onclick="nextStage(10)">
+          <span class="option-emoji">😔</span>
+          <span class="option-text">Me culpo y prometo que mañana lo haré mejor</span>
+        </div>
+        <div class="option-card" onclick="nextStage(10)">
+          <span class="option-emoji">🛠️</span>
+          <span class="option-text">Intento compensar con tareas al azar</span>
+        </div>
+        <div class="option-card" onclick="nextStage(10)">
+          <span class="option-emoji">🛐</span>
+          <span class="option-text">Oro pidiendo fuerzas, pero sigo sin avanzar</span>
+        </div>
+        <div class="option-card" onclick="nextStage(10)">
+          <span class="option-emoji">🎭</span>
+          <span class="option-text">Finjo que todo está bien, pero por dentro me siento muy mal</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 11 ══════════ -->
+  <div class="stage" id="stage-11">
+    <div class="stage-inner">
+      <p class="result-body" style="margin-bottom: 20px;">Al descubrir tu perfil bíblico, puedes finalmente <strong>desbloquear áreas</strong> que ya intentaste cambiar... pero nunca lograste mantener.</p>
+      <h2 class="stage-title">¿Cuáles de las siguientes áreas sientes que necesitas desbloquear?</h2>
+      <div class="options-grid one-col" id="checkboxGroup11">
+        <div class="checkbox-option" onclick="toggleMulti(this, 11)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">✨</span>
+          <span class="option-text">Tener más claridad y confianza en mis decisiones</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleMulti(this, 11)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">🕊️</span>
+          <span class="option-text">Vivir mi rutina con más paz y ligereza interior</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleMulti(this, 11)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">🚀</span>
+          <span class="option-text">Volver a avanzar sin sentir que siempre estás empezando de cero</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleMulti(this, 11)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">👑</span>
+          <span class="option-text">Reconocerte como la mujer que Dios te llamó a ser</span>
+        </div>
+      </div>
+      <button class="btn-continue" id="btnContinue11" onclick="nextStage(11)">Continuar →</button>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 12 ══════════ -->
+  <div class="stage" id="stage-12">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Sientes que estás viviendo en el centro de la voluntad de Dios?</h2>
+      <div class="options-grid one-col">
+        <div class="option-card" onclick="nextStage(12)">
+          <span class="option-emoji">🗺️</span>
+          <span class="option-text">Siento que mi vida está fuera de rumbo espiritualmente</span>
+        </div>
+        <div class="option-card" onclick="nextStage(12)">
+          <span class="option-emoji">📡</span>
+          <span class="option-text">Tengo momentos de conexión, pero me distraigo con facilidad</span>
+        </div>
+        <div class="option-card" onclick="nextStage(12)">
+          <span class="option-emoji">⚙️</span>
+          <span class="option-text">A veces siento que estoy viviendo en piloto automático</span>
+        </div>
+        <div class="option-card" onclick="nextStage(12)">
+          <span class="option-emoji">🔎</span>
+          <span class="option-text">Estoy buscando, pero aún no encuentro claridad</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 13 ══════════ -->
+  <div class="stage" id="stage-13">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Qué es lo que más te gustaría lograr en los próximos 3 meses?</h2>
+      <div class="options-grid one-col" id="checkboxGroup13">
+        <div class="checkbox-option" onclick="toggleMulti(this, 13)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">🚀</span>
+          <span class="option-text">Empezar ese proyecto que he postergado por miedo</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleMulti(this, 13)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">📖</span>
+          <span class="option-text">Organizarme para tener tiempo real con Dios</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleMulti(this, 13)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">❤️</span>
+          <span class="option-text">Recuperar mi autoestima y dejar de sabotearme</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleMulti(this, 13)">
+          <div class="checkbox-box"><span class="checkbox-check">✓</span></div>
+          <span class="option-emoji">🏗️</span>
+          <span class="option-text">Ser constante en algo que ya he intentado muchas veces</span>
+        </div>
+      </div>
+      <button class="btn-continue" id="btnContinue13" onclick="nextStage(13)">Continuar →</button>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 14 ══════════ -->
+  <div class="stage" id="stage-14">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Crees que puedes ser productiva con propósito y paz, incluso sin estar 100% lista o perfecta?</h2>
+      <div class="options-grid one-col">
+        <div class="option-card" onclick="nextStage(14)">
+          <span class="option-emoji">🧭</span>
+          <span class="option-text">Sí, pero necesito ayuda para empezar</span>
+        </div>
+        <div class="option-card" onclick="nextStage(14)">
+          <span class="option-emoji">🔓</span>
+          <span class="option-text">Sí, solo necesitaba verlo con otros ojos</span>
+        </div>
+        <div class="option-card" onclick="nextStage(14)">
+          <span class="option-emoji">🌱</span>
+          <span class="option-text">Quiero creer en esto, pero tengo dudas</span>
+        </div>
+        <div class="option-card" onclick="nextStage(14)">
+          <span class="option-emoji">🙏</span>
+          <span class="option-text">Dudo de mí, pero creo que Dios puede capacitarme</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ STAGE 15 (ENCRUCIJADA) ══════════ -->
+  <div class="stage" id="stage-15">
+    <div class="stage-inner">
+      <h2 class="stage-title">¿Cuál de estas situaciones describe mejor cómo estás hoy?</h2>
+      <div class="options-grid one-col">
+        <div class="option-card" onclick="goToResult('marta')">
+          <span class="option-text">🌿 <strong>Quiero cambiar, pero sigo detenida</strong></span>
+        </div>
+        <div class="option-card" onclick="goToResult('ester')">
+          <span class="option-text">👑 <strong>Pienso demasiado y actúo poco</strong></span>
+        </div>
+        <div class="option-card" onclick="goToResult('debora')">
+          <span class="option-text">⚖️ <strong>Hago muchas cosas, pero sin enfoque</strong></span>
+        </div>
+        <div class="option-card" onclick="goToResult('virtuosa')">
+          <span class="option-text">🌾 <strong>Sé lo que tengo que hacer, pero no logro mantener la constancia</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ LOADING ══════════ -->
+  <div id="loading">
+    <div style="margin-bottom: 32px; text-align: center;">
+      <img src="images/loading_classic_woman.png" alt="Análisis" 
+           style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.8);">
+      <p style="font-size: 14px; margin-top: 16px; color: var(--gold); font-style: italic; max-width: 280px; margin-left: auto; margin-right: auto;">
+        "Dices que quieres cambiar. Pero te saboteas antes de intentarlo."
+      </p>
+    </div>
+    <div class="loading-icon">✨</div>
+    <div class="loading-text" id="loadingText">Cruzando tus respuestas...</div>
+    <div class="loading-bar-wrap">
+      <div class="loading-bar-fill" id="loadingBar"></div>
+    </div>
+    <p class="loading-hint">"En instantes, descubrirás cuál es tu perfil bíblico y cómo este descubrimiento puede transformar tu manera de actuar, revelar tu verdadera identidad y mostrarte cómo la Palabra de Dios puede realinear tu vida con propósito y dirección."</p>
+  </div>
+
+  <!-- ══════════ RESULT: MARTA ══════════ -->
+  <div class="result-screen" id="result-marta">
+    <div class="result-badge"><span>Eres: La Estancada con Buena Intención</span></div>
+    <div class="result-hero">
+      <div class="profile-image-wrapper">
+        <img src="https://i.postimg.cc/wMMXHRwF/image.png" alt="Perfil Marta" loading="lazy">
+      </div>
+      <div class="result-profile-name">Perfil Bíblico: Marta</div>
+      <div class="result-subtitle">Activa, pero sin enfoque en lo esencial</div>
+    </div>
+    <div class="result-divider">✦ ✦ ✦</div>
+    <div class="result-body">
+      <p>"Eres una mujer con ganas de actuar, pero algo invisible parece detenerte. Tal vez sea el miedo a equivocarte, a ser juzgada, o incluso a intentarlo y fracasar otra vez. Ya has intentado empezar de nuevo varias veces, pero sola, sientes que siempre vuelves al mismo lugar. Esto no es pereza. Es cansancio emocional, acumulación de expectativas y una fe que todavía no ha encontrado un plan claro de acción."</p>
+      <div class="result-highlight-box">
+        📖 “Marta estaba ocupada y atrapada en el exceso. Jesús no la reprendió por actuar, sino por perderse en lo que no era esencial.” <br><br>
+        — Lucas 10:41-42
+      </div>
+      <p>💡 Lo que necesitas ahora es:</p>
+      <ul style="text-align: left; padding: 0 20px 20px; color: rgba(245,240,232,0.9); line-height: 1.8;">
+        <li>Claridad sobre por dónde empezar</li>
+        <li>Alivio de la culpa por estar detenida</li>
+        <li>Un plan simple, con enfoque en lo esencial</li>
+        <li>Activación espiritual basada en la Palabra</li>
+      </ul>
+      <p><strong>🙌 No necesitas más presión, necesitas dirección.</strong></p>
+    </div>
+    <div class="cta-wrap">
+      <a href="#" class="cta-button" id="cta-marta">QUIERO ENTENDER MÁS →</a>
+      <p class="cta-disclaimer"><span>🔒</span> Tu resultado es confidencial.</p>
+    </div>
+  </div>
+
+  <!-- ══════════ RESULT: ESTER ══════════ -->
+  <div class="result-screen" id="result-ester">
+    <div class="result-badge"><span>Eres: La Perfeccionista Espiritualizada</span></div>
+    <div class="result-hero">
+      <div class="profile-image-wrapper">
+        <img src="https://i.postimg.cc/Y9b6JzzL/image.png" alt="Perfil Ester" loading="lazy">
+      </div>
+      <div class="result-profile-name">Perfil Bíblico: Ester</div>
+      <div class="result-subtitle">Se preparó con sabiduría y valentía</div>
+    </div>
+    <div class="result-divider">✦ ✦ ✦</div>
+    <div class="result-body">
+      <p>"Eres alguien que quiere hacerlo todo tan bien... que termina sin empezar. Planeas, oras, estudias, reflexionas. Pero en el fondo, siempre estás esperando estar más preparada, más estable, más perfecta. Y el tiempo pasa... El problema no es falta de fe. Es que has condicionado tu acción a sentirte completamente segura, y eso te mantiene detenida en lo ideal, no en lo real."</p>
+      <div class="result-highlight-box">
+        📖 “¿Y quién sabe si no fue para un momento como este que llegaste a ser reina?” <br><br>
+        — Ester 4:14
+      </div>
+      <p>Ester también dudó. Esperaba sentirse más segura y preparada. Pero fue cuando decidió actuar, incluso sin garantías, que el propósito comenzó a cumplirse.</p>
+      <p>💡 Lo que necesitas ahora es:</p>
+      <ul style="text-align: left; padding: 0 20px 20px; color: rgba(245,240,232,0.9); line-height: 1.8;">
+        <li>Liberarte de la parálisis del ideal</li>
+        <li>Valentía para actuar con lo que tienes hoy</li>
+        <li>Un plan claro, simple y ejecutable</li>
+        <li>La convicción de que la obediencia vale más que la perfección</li>
+      </ul>
+      <p><strong>🙌 Dios no te llama a esperar a que todo sea perfecto. Te llama a confiar y actuar con intención, exactamente como estás.</strong></p>
+    </div>
+    <div class="cta-wrap">
+      <a href="#" class="cta-button" id="cta-ester">QUIERO ENTENDER MÁS →</a>
+    </div>
+  </div>
+
+  <!-- ══════════ RESULT: DEBORA ══════════ -->
+  <div class="result-screen" id="result-debora">
+    <div class="result-badge"><span>Eres: La Dedicada Desorganizada</span></div>
+    <div class="result-hero">
+      <div class="profile-image-wrapper">
+        <img src="https://i.postimg.cc/zBJwtcK8/image.png" alt="Perfil Débora" loading="lazy">
+      </div>
+      <div class="result-profile-name">Perfil Bíblico: Débora</div>
+      <div class="result-subtitle">Liderazgo práctico y espiritual</div>
+    </div>
+    <div class="result-divider">✦ ✦ ✦</div>
+    <div class="result-body">
+      <p>"Eres una mujer esforzada, pero te sientes constantemente abrumada. Tu rutina parece una lista interminable de tareas. Haces, resuelves, corres, ayudas... pero al final del día sientes que nada avanzó de verdad. No eres improductiva por falta de acción, sino por falta de estructura y propósito en lo que haces. Tu productividad necesita enfoque, no más carga."</p>
+      <div class="result-highlight-box">
+        📖 “Débora, profetisa, lideraba a Israel en ese tiempo.” <br><br>
+        — Jueces 4:4
+      </div>
+      <p>Débora no hacía todo. Actuaba con claridad y dirección. Su fortaleza venía del alineamiento con su llamado, no del exceso de tareas.</p>
+      <p>💡 Lo que necesitas ahora es:</p>
+      <ul style="text-align: left; padding: 0 20px 20px; color: rgba(245,240,232,0.9); line-height: 1.8;">
+        <li>Una rutina liviana y con propósito</li>
+        <li>Prioridades espirituales y prácticas bien definidas</li>
+        <li>Gestión de energía, no solo tu agenda</li>
+        <li>Aprender a decir “no” sin culpa, y “sí” a lo que Dios quiere hoy</li>
+      </ul>
+      <p><strong>🙌 Ser activa no es lo mismo que ser productiva. Dios quiere que des fruto, con paz, enfoque y sabiduría</strong></p>
+    </div>
+    <div class="cta-wrap">
+      <a href="#" class="cta-button" id="cta-debora">QUIERO ENTENDER MÁS →</a>
+    </div>
+  </div>
+
+  <!-- ══════════ RESULT: VIRTUOSA ══════════ -->
+  <div class="result-screen" id="result-virtuosa">
+    <div class="result-badge"><span>Eres: La Intencional Inconstante</span></div>
+    <div class="result-hero">
+      <div class="profile-image-wrapper">
+        <img src="https://i.postimg.cc/g0yqKWwr/image.png" alt="Perfil Mujer Virtuosa" loading="lazy">
+      </div>
+      <div class="result-profile-name">Perfil Bíblico: Mujer Virtuosa</div>
+      <div class="result-subtitle">Rutina con propósito y diligencia</div>
+    </div>
+    <div class="result-divider">✦ ✦ ✦</div>
+    <div class="result-body">
+      <p>"Ya sabes lo que necesitas hacer. Pero cada vez que lo intentas, algo te saca del enfoque. Empiezas con mucho ánimo... por dos o tres días. Después vuelven el cansancio, la distracción, el desorden mental, y otra vez esa sensación de fracaso. No necesitas más contenido. Necesitas constancia: emocional, espiritual y práctica."</p>
+      <div class="result-highlight-box">
+        📖 “Cuida de los asuntos de su casa y no da lugar a la pereza.” <br><br>
+        — Proverbios 31:27
+      </div>
+      <p>La Mujer Virtuosa no dependía de la motivación. Vivía con constancia e intención.</p>
+      <p>💡 Lo que necesitas ahora es:</p>
+      <ul style="text-align: left; padding: 0 20px 20px; color: rgba(245,240,232,0.9); line-height: 1.8;">
+        <li>Ritmo y rutina con propósito</li>
+        <li>Herramientas simples para mantener el enfoque en lo esencial</li>
+        <li>Una base espiritual sólida que sostenga tus días</li>
+        <li>Claridad sobre qué empezar y qué continuar</li>
+      </ul>
+      <p><strong>🙌 No necesitas empezar todo de nuevo otra vez. Necesitas estabilizarte con sabiduría.</strong></p>
+    </div>
+    <div class="cta-wrap">
+      <a href="#" class="cta-button" id="cta-virtuosa">QUIERO ENTENDER MÁS →</a>
+    </div>
+  </div>
+
+</div><!-- /app -->
+
+<!-- ── STICKY CTA BAR (mobile, aparece 3s após resultado) ── -->
+<div id="sticky-cta-bar">
+  <a href="#" id="sticky-cta-btn" class="sticky-cta-btn">
+    QUIERO ENTENDER MÁS →
+  </a>
+</div>
+
+<script>
+  // ── UTM preservation ──
+  const urlParams = new URLSearchParams(window.location.search);
+  const utmKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','src'];
+  const utmString = utmKeys
+    .filter(k => urlParams.has(k))
+    .map(k => `${k}=${encodeURIComponent(urlParams.get(k))}`)
+    .join('&');
+
+  function buildUrl(base, profile) {
+    const profileParam = profile ? `perfil=${profile}` : '';
+    const allParams = [profileParam, utmString].filter(Boolean).join('&');
+    return allParams ? `${base}?${allParams}` : base;
+  }
+
+  // ── Particles ──
+  (function() {
+    const wrap = document.getElementById('particles');
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.setProperty('--dur', (8 + Math.random() * 10) + 's');
+      p.style.setProperty('--delay', (Math.random() * 12) + 's');
+      p.style.setProperty('--x', (Math.random() * 100) + '%');
+      const size = 1 + Math.random() * 2;
+      p.style.width = size + 'px';
+      p.style.height = size + 'px';
+      wrap.appendChild(p);
+    }
+  })();
+
+  // ── State ──
+  let currentStage = 1;
+  const totalStages = 15;
+  let skipStage3 = false;
+
+  // ── Progress ──
+  function updateProgress(step) {
+    const pct = (step / totalStages) * 100;
+    document.getElementById('progressFill').style.width = pct + '%';
+  }
+
+  // ── Selection Handlers ──
+  function handleStep2Select(el, optionId) {
+    // Si elige opción 1 o 2 ( Couch/Yes or Sometimes), NO saltar etapa 3.
+    // Si elige 3 o 4 (Rarely or No), saltar etapa 3.
+    skipStage3 = (optionId === 3 || optionId === 4);
+    nextStage(2);
+  }
+
+  function toggleMulti(el, stageId) {
+    el.classList.toggle('checked');
+    const group = document.getElementById('checkboxGroup' + stageId);
+    const checked = group.querySelectorAll('.checkbox-option.checked');
+    const anyChecked = checked.length > 0;
+    const btn = document.getElementById('btnContinue' + stageId);
+    
+    if (btn) {
+      const wasHidden = !btn.classList.contains('visible');
+      btn.classList.toggle('visible', anyChecked);
+      if (anyChecked && wasHidden) {
+        setTimeout(() => btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+      }
+    }
+  }
+
+  // ── Stage transitions ──
+  function nextStage(from) {
+    let to = from + 1;
+    
+    // Logic for skipping Stage 3
+    if (from === 2 && skipStage3) {
+      to = 4;
+    }
+
+    const fromEl = document.getElementById('stage-' + from);
+    fromEl.classList.add('fading');
+    
+    setTimeout(() => {
+      fromEl.classList.remove('active', 'fading');
+      currentStage = to;
+      const toEl = document.getElementById('stage-' + currentStage);
+      
+      if (toEl) {
+        toEl.classList.add('active');
+        updateProgress(from === 2 && skipStage3 ? 3 : currentStage); // Adjust progress if skipped
+        updateProgress(currentStage);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+          console.error("Stage not found: " + currentStage);
+      }
+    }, 220);
+  }
+
+  // ── Result routing ──
+  function goToResult(profile) {
+    const stage15 = document.getElementById('stage-15');
+    const progressWrap = document.getElementById('progressWrap');
+
+    stage15.classList.add('fading');
+    setTimeout(() => {
+      stage15.classList.remove('active', 'fading');
+      progressWrap.style.display = 'none';
+      startLoading(profile);
+    }, 220);
+  }
+
+  // ── Loading screen ──
+  const loadingPhrases = [
+    'Identificando tu perfil bíblico...',
+    'Analizando patrones de comportamiento...',
+    'Realineando con propósito...',
+    'Generando tu diagnóstico final...'
+  ];
+
+  function startLoading(profile) {
+    const loadingEl = document.getElementById('loading');
+    const textEl    = document.getElementById('loadingText');
+    const barEl     = document.getElementById('loadingBar');
+
+    loadingEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    let phraseIdx = 0;
+    textEl.textContent = loadingPhrases[0];
+
+    const phraseInterval = setInterval(() => {
+      textEl.classList.add('fading');
+      setTimeout(() => {
+        phraseIdx = (phraseIdx + 1) % loadingPhrases.length;
+        textEl.textContent = loadingPhrases[phraseIdx];
+        textEl.classList.remove('fading');
+      }, 300);
+    }, 1000);
+
+    // Animate bar (4s as requested)
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => { barEl.style.width = '100%'; });
+    });
+
+    setTimeout(() => {
+      clearInterval(phraseInterval);
+      loadingEl.classList.remove('active');
+      showResult(profile);
+    }, 4000);
+  }
+
+  function showResult(profile) {
+    const VSL_URL = 'vsl.html'; 
+    const finalUrl = buildUrl(VSL_URL, profile);
+
+    // Set main inline CTA
+    const ctaEl = document.getElementById('cta-' + profile);
+    if (ctaEl) ctaEl.href = finalUrl;
+
+    // Set sticky CTA
+    const stickyCta = document.getElementById('sticky-cta-btn');
+    if (stickyCta) stickyCta.href = finalUrl;
+
+    const resultEl = document.getElementById('result-' + profile);
+    resultEl.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    setTimeout(() => {
+      const bar = document.getElementById('sticky-cta-bar');
+      if (bar) {
+        const mainCta = document.getElementById('cta-' + profile);
+        
+        // Observer to hide sticky bar when main CTA is in view
+        if (mainCta && 'IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                bar.classList.remove('visible');
+              } else {
+                // Only show if we already wanted it visible (after the 3s delay)
+                bar.classList.add('visible');
+              }
+            });
+          }, { threshold: 0.1 });
+          observer.observe(mainCta);
+        } else {
+          bar.classList.add('visible');
+        }
+      }
+    }, 3000);
+  }
+</script>
+    <script>
+        let prefix = ["https://payment.hotmart.com", "https://pay.hotmart.com"];
+
+        function getParams() {
+            let t = "", e = window.top.location.href, r = new URL(e);
+            if (null != r) {
+                let a = r.searchParams.get("utm_source"),
+                    n = r.searchParams.get("utm_medium"),
+                    o = r.searchParams.get("utm_campaign"),
+                    m = r.searchParams.get("utm_term"),
+                    c = r.searchParams.get("utm_content");
+                -1 !== e.indexOf("?") && (t = "&sck=" + a + "|" + n + "|" + o + "|" + m + "|" + c)
+            }
+            return t
+        }
+        !function() {
+            var t = new URLSearchParams(window.location.search);
+            t.toString() && document.querySelectorAll("a").forEach(function(e) {
+                for (let r = 0; r < prefix.length; r++) -1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+            })
+        }();
+    </script>
+</body>
+</html>

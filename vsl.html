@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tu Video-Diagnóstico Privado – Mujer Sabia y Diligente</title>
+    <meta name="description" content="Mira tu video-diagnóstico personalizado y descubre el camino para convertirte en una Mujer Sabia y Diligente.">
+    
+    <!-- SEO & Social Media Meta Tags -->
+    <meta property="og:title" content="Tu Video-Diagnóstico Privado – Mujer Sabia y Diligente">
+    <meta property="og:description" content="Mira tu video-diagnóstico personalizado y descubre el camino para convertirte en una Mujer Sabia y Diligente.">
+    <meta property="og:image" content="images/favicon.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <!-- VTurbo Optimization -->
+    <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+    <link rel="preload" href="https://scripts.converteai.net/4c1a9c3b-00e2-43d6-a15e-6292f9f02dbb/players/69d411c874f77e9c13a8fa76/v4/player.js" as="script">
+    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+    <link rel="preload" href="https://cdn.converteai.net/4c1a9c3b-00e2-43d6-a15e-6292f9f02dbb/69d4114036249def114d98ca/main.m3u8" as="fetch">
+    <link rel="dns-prefetch" href="https://cdn.converteai.net">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net">
+    <link rel="dns-prefetch" href="https://images.converteai.net">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br">
+    <style>
+        /* RESET & BASE STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #FAFAFA; /* Off-white / White base */
+            color: #333333;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        /* TYPOGRAPHY */
+        .headline {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #111111;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        .headline span {
+            color: #b22222; /* Warning Red */
+        }
+
+        .subheadline {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #555555;
+            margin-bottom: 2rem;
+        }
+
+        /* BRANDING (MSD - Purple/Gold) */
+        .brand-accent {
+            border-top: 4px solid #6a1b9a; /* Purple */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        /* VIDEO CONTAINER */
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            margin-bottom: 1rem;
+            border: 2px solid #d4af37; /* Gold subtle border */
+        }
+
+        .video-wrapper iframe, .video-wrapper video, .vturbo-embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* FAKE PROGRESS BAR (Caso não use a nativa do player) */
+        .fake-progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            height: 6px;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 3rem;
+            display: none; /* Ativado via JS se necessário, mas players como VTurbo já trazem */
+        }
+
+        .fake-progress-bar {
+            height: 100%;
+            background-color: #b22222; /* Red */
+            width: 0%;
+        }
+
+        /* PHASE 2: HIDDEN BY DEFAULT */
+        .delay-section {
+            display: none; /* Hides everything below until the exact pitch second */
+            opacity: 0;
+            transition: opacity 1s ease-in;
+            margin-top: 2rem;
+        }
+        
+        .delay-section.visible {
+            display: block;
+            opacity: 1;
+        }
+
+        /* CTA BUTTON */
+        .cta-btn {
+            display: inline-block;
+            background-color: #28a745; /* Verde */
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+            padding: 1.25rem 2rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4);
+            animation: pulse-btn 2s infinite;
+            transition: transform 0.2s, background-color 0.2s;
+            border: 2px solid #218838;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.02);
+            background-color: #218838;
+        }
+
+        @keyframes pulse-btn {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 15px rgba(40, 167, 69, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+        }
+
+        /* SCARCITY & SECURITY TEXT */
+        .scarcity-text {
+            font-size: 0.95rem;
+            color: #444;
+            margin: 1.5rem auto 1rem auto;
+            max-width: 600px;
+            background-color: #fff3f3;
+            border: 1px solid #ffcdd2;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: left;
+        }
+
+        .scarcity-text strong {
+            color: #d32f2f;
+        }
+
+        .security-text {
+            font-size: 0.9rem;
+            color: #2e7d32;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 2rem;
+        }
+
+        /* GUARANTEE BADGE */
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+            border: 1px dashed #d4af37;
+            background-color: #fffdf5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: left;
+        }
+
+        .guarantee-box img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .guarantee-text {
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        .guarantee-text strong {
+            color: #111;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* SOCIAL PROOF / COMMENTS */
+        .social-proof {
+            text-align: left;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .social-proof h3 {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #444;
+        }
+
+        .comment {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comment:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .comment-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #ccc;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.2rem;
+            object-fit: cover;
+        }
+
+        .comment-content h4 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            color: #111;
+        }
+
+        .comment-content h4 span {
+            font-weight: normal;
+            font-size: 0.8rem;
+            color: #888;
+            margin-left: 8px;
+        }
+
+        .comment-content p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 600px) {
+            .headline { font-size: 1.4rem; }
+            .subheadline { font-size: 1rem; }
+            .cta-btn { font-size: 1.2rem; padding: 1rem; }
+            .guarantee-box { flex-direction: column; text-align: center; align-items: center; }
+        }
+    </style>
+    <!-- Incluir a fonte Inter para o design premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="brand-accent"></div>
+
+    <div class="container">
+        
+        <!-- FASE 1: O QUE ELA VÊ AO CARREGAR A PÁGINA -->
+        <h1 class="headline">🚨 ATENCIÓN PERFIL <span id="user-name">[MARTA]</span>: Tu video-diagnóstico privado ha sido generado con éxito.</h1>
+        <p class="subheadline">Por favor, asegúrate de estar en un lugar tranquilo y con el volumen activado.</p>
+
+        <!-- ESPAÇO PARA O PLAYER (VTurbo, Panda, etc) -->
+        <!-- O embed abaixo é apenas ilustrativo e deve ser substituído pelo embed real do VTurbo -->
+        <div class="video-wrapper">
+            <vturb-smartplayer id="vid-69d411c874f77e9c13a8fa76" style="display: block; margin: 0 auto; width: 100%; max-width: 100%;"></vturb-smartplayer>
+            <script type="text/javascript">
+                var s=document.createElement("script");
+                s.src="https://scripts.converteai.net/4c1a9c3b-00e2-43d6-a15e-6292f9f02dbb/players/69d411c874f77e9c13a8fa76/v4/player.js";
+                s.async=!0;
+                document.head.appendChild(s);
+            </script>
+        </div>
+
+        <!-- FASE 2: PITCH SECTION -->
+        <div class="delay-section" id="pitch-section">
+            <a href="https://pay.hotmart.com/B100987203O?checkoutMode=10" class="cta-btn">SÍ, QUIERO ACTIVAR MI ACCESO AHORA ➔</a>
+            
+            <div class="scarcity-text">
+                ⚠️ <strong>Aviso:</strong> Como nuestro sistema genera protocolos personalizados, tu diagnóstico y la reserva de tus 3 regalos se eliminaran permanentemente si cierras esta página.
+            </div>
+
+            <div class="security-text">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                Pago 100% seguro. Cobro en tu moneda local.
+            </div>
+
+            <div class="guarantee-box">
+                <img src="https://i.postimg.cc/q7SjG8Xb/garantia.png" alt="Garantía 30 Días">
+                <div class="guarantee-text">
+                    <strong>🛡️ Garantía Incondicional de 30 Días</strong>
+                    Si no ves resultados, te devolvemos el 100% de tu dinero y te quedas con el material de regalo.
+                </div>
+            </div>
+
+            <div class="social-proof">
+                <h3>Lo que dicen mujeres que ya aplicaron el protocolo:</h3>
+                
+                <div class="comment">
+                    <div class="comment-avatar">C</div>
+                    <div class="comment-content">
+                        <h4>Camila R. <span>• Hace 2 días</span></h4>
+                        <p>"Hermana, pensé que era otra rutina cansada más, pero el paso 4 me quitó un peso gigante de encima. Hoy desperté con una paz que no sentía hace años."</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-avatar">L</div>
+                    <div class="comment-content">
+                        <h4>Leticia M. <span>• Hace 5 días</span></h4>
+                        <p>"Increíble cómo mi cuerpo ha respondido en solo la primera semana. El enfoque no es solo físico, sana desde adentro. ¡Gracias infinitas!"</p>
+                    </div>
+                </div>
+
+                <div class="comment">
+                    <div class="comment-avatar">J</div>
+                    <div class="comment-content">
+                        <h4>Juliana P. <span>• Hace 1 semana</span></h4>
+                        <p>"Dudé por el precio, pero es la mejor inversión que he hecho en mi salud. El material es súper claro y fácil de seguir, incluso con mi agenda loca de trabajo."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="margin-top: 4rem; padding: 2rem 1rem; text-align: center; font-size: 0.8rem; color: #888; border-top: 1px solid #eee;">
+        <div class="container">
+            <p>&copy; 2026 Mujer Sabia y Diligente. Todos los derechos reservados.</p>
+            <div style="margin-top: 10px; display: flex; justify-content: center; gap: 20px;">
+                <a href="#" style="color: #888; text-decoration: none;">Política de Privacidad</a>
+                <a href="#" style="color: #888; text-decoration: none;">Términos de Uso</a>
+                <a href="#" style="color: #888; text-decoration: none;">Contacto</a>
+            </div>
+            <p style="margin-top: 20px; font-size: 0.7rem; line-height: 1.4; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Este sitio no es parte del sitio web de Facebook o Facebook Inc. Además, este sitio NO está respaldado por Facebook de ninguna manera. FACEBOOK es una marca registrada de FACEBOOK, Inc.
+            </p>
+        </div>
+    </footer>
+    <script>
+        // LÓGICA 1: Capturar o Nome do Perfil na URL
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            let perfilNome = urlParams.get('perfil');
+            
+            if (perfilNome) {
+                // Formatar para Uppercase
+                perfilNome = perfilNome.toUpperCase();
+                document.getElementById('user-name').innerText = perfilNome;
+            } else {
+                // Fallback caso não venha parâmetro
+                document.getElementById('user-name').innerText = 'MARTA';
+            }
+
+            // Iniciar o delay para o pitch direto
+            iniciarDelayPitch();
+        });
+
+        // Configuração do Delay em Milissegundos
+        // Exemplo: Se ela fala o preço em 12 minutos e 30 segundos
+        // Calculo: (12 * 60) + 30 = 750 segundos -> 750000 milissegundos
+        const TEMPO_PITCH_MS = 454000; // 7m 34s para o pitch do vídeo
+
+        function iniciarDelayPitch() {
+            setTimeout(function() {
+                const pitchSection = document.getElementById('pitch-section');
+                pitchSection.classList.add('visible');
+                
+                // Rola a página suavemente para o botão se necessário
+                // pitchSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, TEMPO_PITCH_MS);
+        }
+    </script>
+    <script>
+        let prefix = ["https://payment.hotmart.com", "https://pay.hotmart.com"];
+
+        function getParams() {
+            let t = "", e = window.top.location.href, r = new URL(e);
+            if (null != r) {
+                let a = r.searchParams.get("utm_source"),
+                    n = r.searchParams.get("utm_medium"),
+                    o = r.searchParams.get("utm_campaign"),
+                    m = r.searchParams.get("utm_term"),
+                    c = r.searchParams.get("utm_content");
+                -1 !== e.indexOf("?") && (t = "&sck=" + a + "|" + n + "|" + o + "|" + m + "|" + c)
+            }
+            return t
+        }
+        !function() {
+            var t = new URLSearchParams(window.location.search);
+            t.toString() && document.querySelectorAll("a").forEach(function(e) {
+                for (let r = 0; r < prefix.length; r++) -1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+            })
+        }();
+    </script>
+</body>
+</html>
