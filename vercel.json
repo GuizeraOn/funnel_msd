@@ -1,17 +1,13 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/quiz-mujer-sabia.html"
-    },
-    {
       "source": "/quiz",
-      "destination": "/quiz-mujer-sabia.html"
+      "destination": "/index.html"
     },
     {
       "source": "/vsl",
       "destination": "/vsl.html"
     }
-  ],
-  "cleanUrls": true
+  ]
 }
